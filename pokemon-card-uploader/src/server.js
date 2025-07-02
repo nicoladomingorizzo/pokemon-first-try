@@ -3,7 +3,7 @@
 const express = require('express');
 const path = require('path');
 const cors = require('cors'); // Importa il modulo CORS
-const cardRoutes = require('./routes/cardRoutes'); // Importa le tue rotte per le carte
+const cardRoutes = require('./js/routers/cards'); // Importa le tue rotte per le carte
 
 const app = express();
 const PORT = process.env.PORT || 3000; // Porta del server
