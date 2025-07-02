@@ -1,9 +1,7 @@
 /* Stili CSS per richiamare una Poké Ball */
 body {
     font-family: Arial, sans-serif;
-    /* Font generico per un look più pulito */
     background-color: #f4f4f4;
-    /* Grigio chiaro di base */
     display: flex;
     justify-content: center;
     align-items: center;
