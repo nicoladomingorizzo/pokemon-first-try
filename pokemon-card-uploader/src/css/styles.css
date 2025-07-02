@@ -1,0 +1,216 @@
+/* Stili CSS per richiamare una Poké Ball */
+body {
+    font-family: Arial, sans-serif;
+    /* Font generico per un look più pulito */
+    background-color: #f4f4f4;
+    /* Grigio chiaro di base */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #d60000 50%, #ffffff 50%);
+    /* Sfondo rosso e bianco */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    background-color: #ffffff;
+    /* Bianco per il modulo */
+    padding: 30px;
+    border-radius: 15px;
+    /* Bordi più arrotondati */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /* Ombra più pronunciata */
+    width: 100%;
+    max-width: 500px;
+    border: 5px solid #000;
+    /* Bordo nero spesso */
+    position: relative;
+    /* Per il centro della Poké Ball */
+    overflow: hidden;
+    /* Nasconde ciò che esce dai bordi arrotondati */
+}
+
+/* Fascia centrale nera della Poké Ball - ORA PIÙ TRASPARENTE */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 10px;
+    /* Spessore della fascia nera */
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Reso trasparente (opacità 0.3) */
+    transform: translateY(-50%);
+    z-index: 1;
+    /* Mantenuto un z-index basso */
+}
+
+/* Bottone centrale della Poké Ball - ORA CON BORDO PIÙ TRASPARENTE */
+.container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    border: 8px solid rgba(0, 0, 0, 0.3);
+    /* Bordo reso trasparente (opacità 0.3) */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    /* Mantenuto un z-index basso */
+}
+
+h1 {
+    text-align: center;
+    color: #000;
+    /* Testo nero */
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-size: 1.8em;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.7);
+    /* Piccolo effetto di rilievo */
+    position: relative;
+    /* Assicura che sia sopra gli elementi della Poké Ball */
+    z-index: 4;
+    /* Aumentato z-index */
+}
+
+.form-group {
+    margin-bottom: 18px;
+    position: relative;
+    /* Per posizionare bene gli errori */
+    z-index: 4;
+    /* Aumentato z-index per tutti i form-group */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+    font-size: 0.95em;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: calc(100% - 22px);
+    /* Per compensare padding e border */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.radio-group label {
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: normal;
+    color: #333;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    transform: scale(1.1);
+    /* Rende i radio button leggermente più visibili */
+    margin-right: 8px;
+}
+
+button {
+    background-color: #d60000;
+    /* Rosso Poké Ball */
+    color: white;
+    padding: 15px 25px;
+    border: 3px solid #000;
+    /* Bordo nero per il bottone */
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    z-index: 4;
+    /* Aumentato z-index */
+    position: relative;
+}
+
+button:hover {
+    background-color: #b00000;
+    /* Rosso più scuro al passaggio del mouse */
+    transform: translateY(-2px);
+    /* Piccolo effetto al passaggio del mouse */
+}
+
+.error-message {
+    color: #d60000;
+    /* Rosso per i messaggi di errore */
+    font-size: 0.85em;
+    margin-top: 5px;
+    display: none;
+    /* Nascosto di default */
+    font-weight: bold;
+    z-index: 4;
+    /* Aumentato z-index */
+    position: relative;
+}
+
+.card-display {
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 2px dashed #000;
+    /* Linea tratteggiata nera */
+    position: relative;
+    /* Per assicurare che anche questo contenuto sia sopra */
+    z-index: 4;
+    /* Aumentato z-index */
+}
+
+.card-display h2 {
+    text-align: center;
+    color: #000;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.7);
+}
+
+.card-item {
+    background-color: #ffe0e0;
+    /* Sfondo rosso chiaro per le carte aggiunte */
+    border: 2px solid #d60000;
+    /* Bordo rosso scuro */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    /* Per assicurare che anche questo contenuto sia sopra */
+    z-index: 4;
+    /* Aumentato z-index */
+}
+
+.card-item p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.card-item strong {
+    color: #8b0000;
+    /* Rosso scuro per le etichette */
+}
+
+/* Stili per nascondere/mostrare i campi condizionali */
+.hidden-field {
+    display: none;
+}

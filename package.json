@@ -1,0 +1,26 @@
+{
+  "name": "pokemon-first-try",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --env-file=.env server.js",
+    "dev": "node --watch --env-file=.env server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicoladomingorizzo/pokemon-first-try.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicoladomingorizzo/pokemon-first-try/issues"
+  },
+  "homepage": "https://github.com/nicoladomingorizzo/pokemon-first-try#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0"
+  }
+}
